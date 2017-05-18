@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打字2</title>
+    <style>
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            /*color:#cc0000 ;*/
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+
+        .clear:after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            clear: both;
+        }
+
+        .all {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .sence {
+            width: 100%;
+            height: 100%;
+            background: #ccc;
+            background-image: url(img/bg.png);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .sences {
+            z-index: 3;
+        }
+        .sencess{
+            z-index:4;
+            display: none;
+        }
+        .nanducho{
+            width:839px;
+            height:402px;
+            background-image: url("img/difficult.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin: auto;
+            padding-top: 10%;
+            position: relative;
+        }
+        .float{
+            float: left;
+        }
+        .easy{
+            margin-left: 53px;
+            margin-top: 125px;
+            cursor: pointer;
+        }
+        .medium{
+            margin-left: 50px;
+            margin-top: 125px;
+            cursor: pointer;
+        }
+        .hard{
+            margin-left: 50px;
+            margin-top: 125px;
+            cursor: pointer;
+        }
+        .fanhui{
+            width:110px;
+            height:110px;
+            position: absolute;
+            left:0;
+            right:0;
+            margin: auto;
+            top:384px;
+            cursor: pointer;
+        }
+        .fanhui img{
+            display: block;
+            width:110px;
+            height:110px;
+        }
+        .title {
+            width: 710px;
+            height: 250px;
+            background-image: url("img/logo.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 50px;
+        }
+
+        .nandu {
+            width: 340px;
+            height: 100px;
+            position: absolute;
+            left: 20%;
+            margin: auto;
+            bottom: 100px;
+            cursor: pointer;
+        }
+
+        .nandu img {
+            width: 340px;
+            height: 100px;
+            transition: all 1s ease-in;
+        }
+
+        .nandu img:hover {
+            transform: scale(1.03,1.03);
+        }
+
+        .kaishi {
+            width: 340px;
+            height: 100px;
+            position: absolute;
+            right: 20%;
+            margin: auto;
+            bottom: 100px;
+            cursor: pointer;
+        }
+
+        .kaishi img {
+            width: 340px;
+            height: 100px;
+            transition: all 1s ease-in;
+        }
+
+        .kaishi img:hover {
+            transform: scale(1.03,1.03);
+        }
+        .zuo{
+            width:20%;
+            height:100%;
+            float: left;
+            position: relative;
+        }
+        .main {
+            width: 60%;
+            height: 100%;
+            float: left;
+            /*background: #b1ffa8;*/
+            position: relative;
+        }
+
+        .control {
+            width: 20%;
+            height: 100%;
+            /*background: #33f;*/
+            float: left;
+        }
+        .box {
+            width: 195px;
+            height: 65px;
+            margin: 20px auto;
+            border-radius: 10px;
+            background-image: url("img/scor.png");
+            background-repeat: no-repeat;
+            background-size: 100%, 100%;
+            position: relative;
+        }
+        .scorse {
+            font-size: 26px;
+            position: absolute;
+            left: 89px;
+            top: 22px;
+        }
+        .boxs {
+            background-image: url("img/life.png");
+            z-index: 2;
+        }
+
+        .life{
+            width: 134px;
+            height: 29px;
+            position: absolute;
+            left:53px;
+            top: 12px;
+            z-index: 1;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #000 inset;
+            background-image: url(img/progress.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            transition: all 1s;
+        }
+
+        .letter {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            background-size: 100%, 100%;
+        }
+
+        .btn {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+            margin: 30px auto;
+            cursor: pointer;
+            text-align: center;
+            line-height: 30px;
+        }
+        .start{
+            display: block;
+            width:80px;
+            height:80px;
+            background-image: url("img/restart.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 100%,100%;
+        }
+        .pause{
+            background-image: url("img/stop.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 100%,100%;
+        }
+        .tui{
+            background-image: url("img/back.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 100%,100%;
+        }
+        .paihangban{
+            width:80px;
+            height:80px;
+            background-image: url("img/排行榜.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 100%,100%;
+            margin:40px auto;
+        }
+        .paihang{
+            width:518px;
+            height:399px;
+            background-image: url("img/paihang.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 100%,100%;
+            position: fixed;
+            left: 0;
+            right:0;
+            top:0;
+            bottom:0;
+            margin: auto;
+            display: none;
+        }
+        table{
+            width:400px;
+            height: 200px;
+            border-collapse: collapse;
+            border: 1px solid #cc9300;
+            margin: 0 auto;
+            margin-top: 130px;
+            color: #000;
+        }
+        th,td{
+            width:160px;
+            height:50px;
+            border: 1px solid #cc9300;
+            border-bottom: 0;
+            text-align: center;
+        }
+        .tablefanhui{
+            width:85px;
+            height:85px;
+            position: absolute;
+            background-image: url("img/back.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 100%,100%;
+            bottom:-22px;
+            left:0;
+            right:0;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="all">
+    <div class="sence sences">
+        <div class="title"></div>
+        <div class="nandu">
+            <img src="img/choose.png" alt="">
+        </div>
+        <div class="kaishi">
+            <img src="img/start.png" alt="">
+        </div>
+    </div>
+    <div class="sence sencess">
+        <div class="nanducho">
+            <div class="easy choose float">
+                <img src="img/easy.png" alt="">
+            </div>
+            <div class="medium choose float">
+                <img src="img/medium.png" alt="">
+            </div>
+            <div class="hard choose float">
+                <img src="img/hard.png" alt="">
+            </div>
+            <div class="fanhui">
+                <img src="img/quit.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="sence">
+        <div class="zuo">
+            <div class="box">
+                <span class="scorse scor">0</span>
+            </div>
+            <div class="box">
+                <span class="scorse state">1</span>
+            </div>
+            <div class="box boxs">
+                <div class="life"></div>
+            </div>
+            <div class="paihangban"></div>
+        </div>
+        <div class="main"></div>
+        <div class="control">
+
+            <div class="btn start">
+                <!--<img src="img/restart.png" alt="">-->
+            </div>
+            <div class="btn pause"></div>
+            <div class="btn tui"></div>
+        </div>
+    </div>
+    <div class="paihang">
+        <table>
+            <thead>
+                <tr>
+                    <th>名次</th>
+                    <th>姓名</th>
+                    <th>成绩</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div class="tablefanhui"></div>
+    </div>
+
+</div>
+<script>
+    var youxi = document.querySelector(".sence");//初始界面
+    var shouye = document.querySelector(".sences");//游戏界面
+    var nandu = document.querySelector(".sencess");//难度选择界面
+    var choose = document.querySelectorAll(".choose");//难度选择界面  三个
+    var easy = document.querySelector(".easy");//难度选择界面  简单
+    var medium = document.querySelector(".medium");//难度选择界面  中等
+    var hard = document.querySelector(".hard");//难度选择界面  困难
+    var nanducho = document.querySelector(".nandu");//游戏界面  难度选择
+    var main = document.querySelector(".main");//游戏界面  字母移动盒子
+    var start = document.querySelector(".start");//游戏界面  重新开始
+    var life = document.querySelector(".life");//游戏界面  生命值
+    var scor = document.querySelector(".scor");//游戏界面  分值
+    var state = document.querySelector(".state");//游戏界面  关卡
+    var pause = document.querySelector(".pause");//游戏界面  暂停、继续
+    var kaishiyx = document.querySelector(".kaishi");//初始界面  开始游戏
+    var fanhui = document.querySelector(".fanhui");//难度选择界面  返回初始界面
+    var tui = document.querySelector(".tui");//游戏界面  返回初始界面
+    var paihangban=document.querySelector(".paihangban");//游戏界面  排行版
+    var paihang=document.querySelector(".paihang");
+    var tablefanhui=document.querySelector(".tablefanhui");
+    var table=document.querySelector("table");//游戏界面  排行版内容
+    var tbody=document.querySelector("tbody");//游戏界面  排行版具体内容
+    class Game {
+        constructor(main, scor, life, state) {
+            this.obj = {};
+            this.num = 3;
+            this.main = main;
+            this.scorele = scor;
+            this.scor = 0;
+            this.speed = 5;
+            this.lifeele = life;
+            this.life = 5;
+            this.stateele = state;
+            this.state = 1;
+//            this.startele=start;
+            this.height = window.innerHeight;
+            this.st = null;
+            this.startControl = false;
+        }
+        //游戏开始
+        start() {
+            for(var i=0;i<this.num;i++){
+                this._createLetter();
+            }
+            this._move();
+            this._keydown();
+            this.bestscor=localStorage.bestscor?JSON.parse(localStorage.bestscor):[];
+        }
+        //创建字母
+        _createLetter() {
+            var div = document.createElement("div");
+            div.className = "letter";
+            do {
+                var rn = Math.floor(Math.random() * 26 + 65);
+                var le = String.fromCharCode(rn);
+            } while (this.obj[le]);
+            div.style.backgroundImage = `url(img/${le}.png)`;
+            // div.innerHTML="le";
+            do {
+                var rl = Math.random() * 720;
+            } while (this._check(rl))
+            var rt = -Math.random() * 100;
+            div.style.left = rl + "px";
+            div.style.top = rt + "px";
+            this.obj[le] = {left: rl, top: rt, el: div};
+            main.appendChild(div);
+        }
+        //判断字母是否重合
+        _check(left) {
+            for (var i in this.obj) {
+                if (left > this.obj[i].left - 80 && left < this.obj[i].left + 80) {
+                    return true;
+                }
+            }
+        }
+        //字母的向下移动
+        _move(){
+            this.st = setInterval(function () {
+                for (var i in this.obj) {
+                    var t = this.obj[i].top;
+                    t += this.speed;
+                    this.obj[i].top = t;
+                    this.obj[i].el.style.top = t + "px";
+                    if (t > this.height) {
+                        this.life--;
+                        this.lifeele.style.width = (134-134*(1/5*(5-this.life)))+"px";
+                        this.main.removeChild(this.obj[i].el);
+                        delete this.obj[i];
+                        this._createLetter();
+                        if (this.life == 0) {
+                            alert(`游戏结束得分为${this.scor}!`);
+                            this.gameover();
+                            return;
+                        }
+                    }
+                }
+            }.bind(this), 50);
+        }
+        //鼠标按下相应字母
+        _keydown() {
+            document.onkeydown = function (e) {
+                var keyCode = e.keyCode;
+                var le = String.fromCharCode(keyCode);
+                if (this.obj[le]) {
+                    this.main.removeChild(this.obj[le].el);
+                    delete this.obj[le];
+                    this.scor++;
+                    this.scorele.innerHTML = this.scor;
+                    if (this.scor % 10 == 0) {
+                        this._upstate();
+                    }
+                    this._createLetter();
+                }
+            }.bind(this)
+        }
+        //当分数为10的倍数时关卡的选择
+        _upstate() {
+            this.state++;
+            this.stateele.innerHTML = this.state;
+            if (this.state <= 4) {
+                this._createLetter();
+            } else {
+                this.speed++;
+            }
+        }
+        //游戏暂停
+        pause() {
+            clearInterval(this.st);
+            document.onkeydown = null;
+        }
+        //游戏继续
+        play() {
+            this._move();
+            this._keydown();
+        }
+        //游戏结束
+        gameover() {
+            if(this.bestscor.length<3||(this.bestscor.length>=3&&this.scor>this.bestscor[2].scor)){
+
+                var player=prompt("");
+                this.bestscor.push({player,scor:this.scor});
+                this.bestscor.sort(function (a,b) {//排序
+                    if(a.scor>b.scor){
+                        return -1;
+                    }else{
+                        return 1;
+                    }
+                });
+                if(this.bestscor.length>3){
+                    this.bestscor.pop();
+                }
+                localStorage.bestscor=JSON.stringify(this.bestscor);
+                alert(this.scor);
+            }
+//            this.dqscor.innerHTML=this.scor;
+//            this.zuigaodefen.innerHTML=this.bestscor[0].scor;
+            this.main.innerHTML = "";
+            this.obj = {};
+            this.speed = 5;
+            this.scor = 0;
+            this.scorele.innerHTML = 0;
+            this.life = 5;
+            this.lifeele.style.width=134+"px";
+            this.state = 1;
+            this.stateele.innerHTML = 1;
+            clearInterval(this.st);
+        }
+        back(){
+            this.main.innerHTML = "";
+            this.obj = {};
+            this.speed = 5;
+            this.scor = 0;
+            this.scorele.innerHTML = 0;
+            this.life = 5;
+            this.lifeele.style.width=134+"px";
+            this.state = 1;
+            this.stateele.innerHTML = 1;
+            clearInterval(this.st);
+        }
+        paihangban(){
+            var bestscor=localStorage.bestscor?JSON.parse(localStorage.bestscor):[];
+            bestscor.forEach(function (v,i) {
+                var tr=document.createElement("tr");
+                tr.innerHTML=`<td>${i+1}</td><td>${bestscor[i].player}</td><td>${bestscor[i].scor}</td>`;
+                tbody.appendChild(tr);
+            })
+        }
+    }
+
+    var game = new Game(main,scor,life,state);
+//    game.start();
+    //开始游戏按钮
+    kaishiyx.onclick = function () {
+        shouye.style.display = "none";
+        game.start();
+    }
+    nanducho.onclick=function () {
+        nandu.style.display="block";
+        youxi.style.display="none";
+        shouye.style.display="none";
+    }
+    fanhui.onclick=function () {
+        nandu.style.display="none";
+        youxi.style.display="none";
+        shouye.style.display="block";
+    }
+    tui.onclick=function () {
+        game.gameover();
+        nandu.style.display="none";
+        youxi.style.display="none";
+        shouye.style.display="block";
+    }
+    start.onclick=function () {
+        game.start();
+    }
+    //暂停、继续按钮
+    var flag=true;
+    pause.onclick = function () {
+        if (flag) {
+            this.style.backgroundImage=`url("img/continue.png")`;
+            game.pause();
+        } else {
+            this.style.backgroundImage=`url("img/stop.png")`;
+            game.play();
+        }
+        flag = !flag;
+    }
+    //重新开始游戏按钮
+    start.onclick = function () {
+        game.back();
+        game.start();
+    }
+    //难度的选择
+    for(let i=0;i<3;i++){
+        choose[i].onclick=function () {
+            for(let j=0;j<3;j++){
+                choose[j].style.border="0px";
+            }
+            choose[i].style.border="1px solid #cc0000";
+            game.num=i*2+1;
+        }
+    }
+    //排行版
+    paihangban.onclick=function (e) {
+        e.stopPropagation();//阻止事件流默认行为
+        paihang.style.display="block";
+        game.paihangban();
+        this.style.pointerEvents="none";
+        pause.style.backgroundImage=`url("img/continue.png")`;
+        game.pause();
+        flag =false;
+    }
+    tablefanhui.onclick=function () {
+        tbody.innerHTML="";
+        paihang.style.display="none";
+        paihangban.style.pointerEvents="auto";
+        pause.style.backgroundImage=`url("img/stop.png")`;
+        game.play();
+        flag =true;
+    }
+</script>
+</body>
+</html>

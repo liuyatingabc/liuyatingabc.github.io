@@ -1,0 +1,352 @@
+.clear:after{
+    content:"";
+    display:block;
+    width:0;
+    height:0;
+    clear:both;
+}
+/*body{*/
+	/*background: #e4ffe6;*/
+	/*overflow-X: hidden;*/
+/*}*/
+/*.bannertu{*/
+	/*width: 100%;*/
+	/*height: auto;*/
+	/*!*background-image: url(../img/banner-2.jpg);*!*/
+	/*!*background-repeat: no-repeat;*/
+    /*background-size: auto 100%;*!*/
+/*}*/
+.zhongzi{
+	height:70px;
+	line-height: 70px;
+	position: absolute;
+	left:0;
+	bottom:0;
+	right:0;
+	top:0;
+	margin:auto;
+	color: #fff;
+	font-size: 64px;
+	font-weight: bold;
+}
+.neikuan{
+    width:980px;
+	margin:0 auto;
+}
+.geren{
+	width: 100%;
+	position: relative
+}
+.gerenziyi{
+	color: #000;
+}
+.gerenxia{
+	width:100%;
+	height:280px;
+	margin-top:80px;
+	position: relative;
+}
+.gerenzuo{
+	width: 50%;
+	height:300px;
+	padding-right: 10px;
+	box-sizing:border-box;
+	float: left;
+	position: relative;
+}
+.gerentu{
+	width: 200px;
+	height: auto;
+	transition:all 1s;
+	/*padding-left: 100px;*/
+	position: absolute;
+	left:150px;
+	top:-20px;
+	opacity:0;
+}
+.gerenxiayi{
+	width:150px;
+	height:200px;
+	/*background: #000;*/
+	/*opacity:0.5;*/
+	border: 5px solid #FFC000;
+	border-radius: 10px;
+	position: absolute;
+	left:1250px;
+	top:0;
+	transition:all 1s;
+}
+.gerenxiayiyi{
+	/*margin-left: 15px;*/
+	font-size: 18px;
+	height:50px;
+	line-height: 50px;
+	color:#000;
+}
+.gerenxiaer{
+	left:1500px;
+}
+
+
+
+/*我的技能*/
+.jin{
+	width:100%;
+	height:100%;
+	position: absolute;
+	left:0;
+	top:0;
+	background: rgba(255,255,255,0.3);
+}
+.jins{
+	width:100%;
+	height:100%;
+	position: absolute;
+	left:0;
+	top:0;
+	background: rgba(255,255,255,0.8);
+}
+.jinengs{
+	width:500px;
+	height:500px;
+	margin: 0 auto;
+	margin-top: 25px;
+	position: relative;
+}
+#jinengbox{
+	width:500px;
+	height:500px;
+}
+.js{
+	width:200px;
+	height:50px;
+	border:1px solid #fff;
+	color:#000;
+	border-radius: 5px;
+	position: absolute;
+	left:-800px;
+	top:-600px;
+	font-size: 16px;
+	line-height: 50px;
+	transition: all 1s;
+}
+.html{
+	width:200px;
+	height:50px;
+	border:1px solid #fff;
+	color:#000;
+	border-radius: 5px;
+	position: absolute;
+	left:-600px;
+	top:600px;
+	font-size: 16px;
+	line-height: 50px;
+	transition: all 1s;
+}
+.jquery{
+	width:200px;
+	height:50px;
+	border:1px solid #fff;
+	color:#000;
+	border-radius: 5px;
+	position: absolute;
+	left:1000px;
+	top:-600px;
+	font-size: 16px;
+	line-height: 50px;
+	transition: all 1s;
+}
+.less{
+	width:200px;
+	height:50px;
+	border:1px solid #fff;
+	color:#000;
+	border-radius: 5px;
+	position: absolute;
+	left:1000px;
+	top:200px;
+	font-size: 16px;
+	line-height: 50px;
+	transition: all 1s;
+}
+.css{
+	width:200px;
+	height:50px;
+	border:1px solid #fff;
+	color:#000;
+	border-radius: 5px;
+	position: absolute;
+	left:1000px;
+	top:600px;
+	font-size: 16px;
+	line-height: 50px;
+	transition: all 1s;
+}
+/*我的作品*/
+.zuop{
+	/*margin-top: 40px;*/
+}
+.zuopinnr{
+	width:800px;
+	height:400px;
+	border: 1px solid #ccc;
+	margin: 0 auto;
+	overflow: hidden;
+	margin-top: 50px;
+}
+.zuopinnryi{
+	width:250px;
+	height:100px;
+	margin: 50px 8.3px;
+	float: left;
+	background: #fff;
+}
+.zuopinnryiimg{
+	width:100%;
+	height:100%;
+}
+.zuopinnryiimgs{
+	width:100%;
+	height:100%;
+	background: #279bff;
+}
+.zuopinnrer{
+	width:150px;
+	height:150px;
+	margin: 25px 112.5px;
+	float: left;
+}
+
+
+.zuopyi{
+	margin-bottom: 10px;
+	float: left;
+	padding:0 50px;
+}
+.zuoptu{
+	width: 100px;
+	height:100px;
+	background: #fff;
+	/*box-sizing:border-box;*/
+	/*float: left;*/
+}
+.zuoptu img{
+	width:100px;
+	height:auto;
+	line-height: 100px;
+}
+.zuopzi{
+	width: 100px;
+	text-align: center;
+	/*box-sizing:border-box;*/
+	line-height: 32px;
+	font-size: 16px;
+	color: #4d4c4c;
+	float: right;
+}
+
+
+
+
+
+/*底部*/
+.dibu{
+	margin: 40px 0;
+}
+.dibushang{
+    font-size: 30px;
+	color: #000000;
+	text-align: center;
+}
+.dibulianxi{
+	margin-top: 100px;
+}
+.dibulianxiyi{
+	width: 25%;
+	float: left;
+	color: #fff;
+}
+.dibuziyi{
+    line-height: 40px;
+	font-size: 20px;
+	/*color: #8a8a8a;*/
+	text-align: center;
+}
+.dibuzier{
+	line-height: 40px;
+	font-size: 20px;
+	/*color: #8a8a8a;*/
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/*中屏*/
+@media screen and (max-width:1068px){
+	.neikuan{
+	 width:100%;
+	 margin-right: 22px;
+	 margin-left: 2px;
+	}
+	/*我的技能*/
+	.neikuan2{
+		margin-left: 22px;
+	    margin-right: 22px;
+	}
+
+	/*底部*/
+	.dibulianxiyi{
+		width: 50%;
+	}
+}
+/*小屏*/
+@media screen and (max-width:735px){
+	/*底部*/
+	.dibulianxiyi{
+		width: 100%;
+		float: none;
+	}
+	/*我的技能*/
+    /*个人介绍*/
+    .gerenzuo{
+        float: none;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .gerentu{
+        padding: 0;
+        margin: 0 auto;
+    }
+    .gerenyou{
+    	width: 100%;
+    	float: none;
+    }
+    .gerenyou{
+    	float: none;
+        margin: 0 auto;
+        padding: 0;
+        margin-bottom: 40px;
+    }
+    .gerenyouziyi{
+    	margin: 0;
+    	text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,517 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.eot');
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../font/iconfont.woff') format('woff'),
+  url('../font/iconfont.ttf') format('truetype'),
+  url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.clear:after{
+	content："";
+	display:block;
+	width:0;
+	height:0;
+	clear:both;
+}
+/*大屏*/
+.neikuan{
+	width:980px;
+	margin:0 auto;
+}
+
+header{
+	height:40px;
+	background:#444;
+}
+
+.guanggao{
+	float:right;
+	line-height:40px;
+	font-size:12px;
+	color:#a8a8aa;
+}
+/*导航*/
+nav{
+	height:44px;
+    background: #000;
+}
+nav>.neikuan>ul{
+	text-align:justify;   /*实现两端对齐的效果*/
+}
+nav>.neikuan>ul:after{
+	content:"";
+	display:inline-block;
+	width:100%;
+    
+}
+nav>.neikuan>ul>li{
+	display:inline-block;
+	color:#fff;
+	line-height:44px;
+	font-size:12px;
+	vertical-align:center;
+    position: relative;
+}
+nav>.neikuan>ul>li>div.iconfont{
+	font-size:18px;
+}
+.col-lg-none{
+	display:none !important;   /*大屏的时候菜单消失*/  /*提高优先级*/
+}
+.col-lg-inblock{
+	display:inline-block !important;
+}
+.navhover{
+    cursor: pointer;
+}
+nav ul li .xiaofg{
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    transform:rotate(45deg);
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 42px;
+    display: none;
+}
+nav ul li #shoppingCart{
+    width: 290px;
+    height: 310px;
+    position: absolute;
+    right: -20px;
+    top: 50px;
+    background: #fff;
+    z-index: 1000;
+    display: none;
+}
+.shoppingCartyi{
+    width: 100%;
+    height: 87px;
+    line-height: 87px;
+    text-align: center;
+    font-size: 14px;
+    color: #888888;
+}
+.shoppingCarter{
+    padding: 0 20px;
+}
+.shoppingCarter li{
+    height: 43px;
+    border-top: 1px solid #e3e3e3;
+    font-size: 14px;
+    color: #0070c9;
+    line-height: 43px;
+    cursor: pointer;
+}
+.shoppingCarter li .iconfont{
+    float: left;
+    width: 30px;
+}
+.shoppingCarter li .shoppingCarterzi{
+    float: left;
+}
+.shoppingCarter li .shoppingCarterzi:hover{
+    text-decoration: underline;
+}
+.body{
+    position: relative;
+}
+.menupo{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: none;
+}
+.menuponav{
+    padding: 0 5px;
+    height: 54px;
+    font-size: 20px;
+    color: #fff;
+    line-height: 54px;
+}
+.menuponavyi{
+    width: 50%;
+    float: left;
+    cursor: pointer;
+}
+.menuponaver{
+    width: 54px;
+    height: 54px;
+    text-align: center;
+    transform:rotate(-45deg);
+}
+.menuponr{
+    padding: 10px 48px 0;
+    color: #fff;
+}
+.menuponryi{
+    border-top: 1px solid #333333;
+    height: 43px;
+    line-height: 43px;
+}
+.menuponryi input{
+    height: 40px;
+    background: #000;
+    color: #fff;
+    border: #000;
+}
+.menuponrer{
+    width: 100%;
+    height: 1px;
+    background: #fff;
+}
+
+
+/*banner图*/
+.banner{
+	width: 100%;
+	height: 496px;
+	background: #0a0a0a;
+	background-image: url(../img/iphone_alt_large.jpg);
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	background-position: center center;
+}
+/*banner图下*/
+.bannerxia{
+    width: 100%;
+    overflow: hidden;
+}
+.bannerxiayi{
+	width: 25%;
+	height: 200px;
+	background-image: url(../img/accessories_large.jpg);
+	background-repeat: no-repeat;
+    background-position: center; 
+	float: left;
+}
+.bannerxiayi:nth-child(2){
+	background-image: url(../img/ipad_pro_large.jpg);
+}
+.bannerxiayi:nth-child(3){
+	background-image: url(../img/airpods_large.jpg);
+}
+.bannerxiayi:nth-child(4){
+	background-image: url(../img/iphone_upgrade_large.jpg);
+}
+.wenzi{
+	margin-top: 19px;
+}
+.wenzibox{
+	font-size: 10px;
+	color: #888888;
+	/*padding-bottom: 19px;*/
+}
+.hengx{
+    margin-top: 19px;
+}
+.hengxian{
+	height: 1px;
+	background: #d6d6d6;
+}
+
+.xuanz{
+	overflow: hidden;
+}
+.xuanzeyi{
+	float: left;
+	width: 20%;
+}
+.jiahao{
+    display: none;
+    /*transform:rotate(0deg);*/
+}
+.xuanzbiaoti{
+    line-height: 20px;
+    font-size: 12px;
+    color: #000000;
+    margin-top: 21px;
+    margin-right: 22px;
+    /*margin-bottom: 10px;*/
+}
+ul li a{
+    line-height: 20px;
+    font-size: 12px;
+    color: #555555;
+    /*margin-top: 11px;*/
+}
+.xuanzxia{
+	margin-top: 28px;
+}
+.wenzibox a{
+	color: #0070c9;
+}
+
+.hengx2{
+    margin-top: 19px;
+}
+/*底部*/
+.dibu{
+    width: 100%;
+    overflow: hidden;
+}
+.dibushang{
+    width: 100%;
+    overflow: hidden;
+}
+.dibushangyi{
+    font-size: 10px;
+    color: #888888;
+    margin-top: 11px;
+    float: left;
+}
+.dibushanger{
+    display: block;
+    height: 20px;
+}
+.dibushanger li a{
+    font-size: 10px;
+    color: #888888;
+    float: left;
+    margin-top: 10px; 
+}
+.dibushanger span{
+    color: #d6d6d6;
+    float: left;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 10px;                                                                                                        
+}
+.dibushangsan{
+    float: right;
+    height: 21px;
+    margin-top: 11px;
+    float: right;
+}
+.dibutu{
+    float: left;
+}
+.dibuzi{
+    /*margin-top: 11px;*/
+    font-size: 10px;
+    color: #888888;
+    float: left;
+}
+.dibuxia{
+    width: 100%;
+    overflow: hidden;
+}
+.dibuxiazi{
+    font-size: 10px;
+    color: #888888;
+    margin-top: 13px;
+    margin-bottom: 24px;
+}
+
+
+
+/*中屏*/
+@media screen and (max-width:1068px){
+	        .neikuan{
+	         	width:100%;
+	         }
+	        .guanggao{
+	        	margin-right:25px;
+	        }
+
+
+	        nav>.neikuan>ul>li:nth-child(2){
+	            margin-left:25px;     /*中屏是第一个元素已经隐藏掉了*/
+            }
+
+           nav>.neikuan>ul>li:last-child{
+	           margin-right:25px;
+            }
+            .col-md-none{
+            	display:none !important;
+            }
+            .banner{
+	            width: 100%;
+	            height: 455px;
+	            background: #0a0a0a;
+	            background-image: url(../img/iphone_alt_medium.jpg);
+	            background-repeat: no-repeat;
+	            background-size: auto 100%;
+	            background-position: center center;
+            }
+            .bannerxia{
+                width: 100%;
+            }
+            .bannerxiayi{
+	            width: 50%;
+	            background-image: url(../img/accessories_medium.jpg);
+            }
+            .bannerxiayi:nth-child(2){
+	            background-image: url(../img/ipad_pro_medium.jpg);
+            }
+            .bannerxiayi:nth-child(3){
+	            background-image: url(../img/airpods_medium.jpg);
+            }
+            .bannerxiayi:nth-child(4){
+	            background-image: url(../img/iphone_upgrade_medium.jpg);
+            }
+            .wenzibox{
+            	margin-left: 22px;
+            }
+            .hengxian{
+            	margin-left: 22px;
+            	margin-right: 22px;
+            }
+            .xuanzeyi{
+            	width: 18%;
+            }
+            .xuanzeyi:nth-child(1){
+            	margin-left: 22px;
+            }
+            .xuanzeyi:last-child{
+            	margin-left: 22px;
+            }
+            .dibushangsan{
+                margin-right: 22px;
+            }
+            .dibushangyi{
+                margin-left: 22px;
+            }
+            .dibuxia{
+                margin-left: 22px;
+            }
+
+
+
+}
+
+
+/*小屏*/
+@media screen and (max-width:735px){
+	        .col-sm-inblock{
+	        	display:inline-block !important;   /*小屏的时候菜单出现*/
+	        }
+	        .col-sm-none{
+		      display: none!important;
+	        }
+            nav>.neikuan>ul>li:nth-child(1){
+               margin-left:25px;px;
+            }
+	        nav>.neikuan>ul>li:nth-child(2){
+               margin-left:0px;
+            }
+            nav>.neikuan>ul>li:last-child{
+	           margin-right:25px;
+            }
+            nav>.neikuan>ul>.main-nav{
+           	    display:none;
+            }
+            .banner{
+	            width: 100%;
+	            height: 420px;
+	            background: #0a0a0a;
+	            background-image: url(../img/iphone_alt_small.jpg);
+	            background-repeat: no-repeat;
+	            background-size: auto 100%;
+	            background-position: center center;
+            }
+            .bannerxia{
+                width: 100%;
+            }
+            .bannerxiayi{
+	            width: 100%;
+	            background-image: url(../img/accessories_small.jpg);
+            }
+            .bannerxiayi:nth-child(2){
+	            background-image: url(../img/airpods_small.jpg);
+            }
+            .bannerxiayi:nth-child(3){
+	            background-image: url(../img/ipad_pro_small.jpg);
+            }
+            .bannerxiayi:nth-child(4){
+	            background-image: url(../img/iphone_upgrade_small.jpg);
+            }
+            .hengx2{
+                display: none;
+            }
+            
+            .xuanzeyi{
+                width: 100%;
+                margin-right: 22px;
+            }
+            .xuanzeyi ul{
+            	display: none;
+            }
+            .xuanzeyi:nth-child(2){
+            	margin-left: 22px;
+            }
+            .xuanzeyi:nth-child(3){
+            	margin-left: 22px;
+            }
+            .xuanzeyi:nth-child(4){
+            	margin-left: 22px;
+            }
+            .xuanzeyi:nth-child(5){
+            	margin-left: 22px;
+            }
+            .xuanzeyi:nth-child(6){
+            	margin-left: 22px;
+            }
+            .xuanzbiaoti{
+                width: 100%;
+                padding-right: 22px;
+                border-bottom: 1px solid #d6d6d6;
+            }
+            .jiahao{
+                display: block;
+                float: right;
+                margin-right: 22px;
+            }
+            .xian{
+            	height: 1px;
+            	background: #d6d6d6;
+            	margin-left: 22px;
+            	margin-right: 22px;
+            }
+            .dibushanger{
+                float: none;
+                margin-left: 22px;
+            }
+            .dibushangyi{
+                float:none;
+                margin-left: 22px;
+            }
+            .dibushangsan{
+                float:none;
+                margin-left: 22px;
+            }
+            .dibuxia{
+                margin-left: 22px;
+            }
+            .neikuan{
+                padding-right:20px;
+                box-sizing:border-box;
+            }
+
+
+
+
+
+
+
+}
+
+
+
