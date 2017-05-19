@@ -336,7 +336,7 @@ $(function(){
 
     }
   let nowtime=new Date();
-  let lingdian=new Date(2017,4,14,00,00,00);
+  let lingdian=new Date(2017,6,14,0,0,0);
   // console.log(lingdian);
   let lingdiandjs=new daojishi(dhh,dm,ds,lingdian);
   lingdiandjs.play();	
