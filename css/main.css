@@ -260,6 +260,7 @@
 }
 .dibulianxi{
 	margin-top: 50px;
+	margin-bottom: 80px;
 }
 .dibulianxiyi{
 	width: 25%;
@@ -283,7 +284,6 @@
 	line-height: 80px;
 	font-size:40px;
 	margin: 0 auto;
-	margin-top: 80px;
 	display: none;
 }
 
