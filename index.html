@@ -21,7 +21,6 @@
         <div class="zhongzi">欢迎来到我的个人主页</div>
     </div>
     <div class="section">
-        <div class="jins"></div>
         <div class="geren clear">
             <div class="neikuan clear">
                 <div class="gerenziyi">自我介绍</div>
@@ -130,7 +129,7 @@
         <div class="dibu clear">
             <div class="neikuan">
                 <div class="dibushang">联系方式</div>
-                <div class="dibulianxi">
+                <div class="dibulianxi clear">
                     <div class="dibulianxiyi">
                         <div class="dibuziyi">电话</div>
                         <div class="dibuzier">18435105941</div>
@@ -148,6 +147,7 @@
                         <div class="dibuzier">1367294390@qq.com</div>
                     </div>
                 </div>
+                <div class="dibuxia">天道酬勤，总有一天我们终会成功</div>
             </div>
         </div>
     </div>
@@ -159,7 +159,7 @@
 <script>
 $(function(){
     $('#dowebok').fullpage({
-        sectionsColor : ['#1bbc9b', '#86A4BC', '#7BAABE', '#366979', '#356360'],
+        sectionsColor : ['#1bbc9b', '#7D9ABC', '#7BAABE', '#366979', '#356360'],
         'navigation': true,
         afterLoad:function (anchorLink ,index) {
             if(index==2){
@@ -174,6 +174,9 @@ $(function(){
                 $(".css").css({left:"465px",top:"220px"});
                 $(".less").css({left:"400px",top:"365px"});
             }
+            if(index==5){
+                $(".dibuxia").slideDown();
+            }
         },
         onLeave:function (index) {
             if(index==2){
@@ -187,6 +190,9 @@ $(function(){
                 $(".jquery").css({left:"1000px",top:"-600px"});
                 $(".css").css({left:"1000px",top:"200px"});
                 $(".less").css({left:"1000px",top:"600px"});
+            }
+            if(index==5){
+                $(".dibuxia").slideUp();
             }
         }
     });
@@ -208,8 +214,6 @@ $(function(){
 
     $(".section").eq(0).css("background","url(images/banner.jpg) no-repeat");
     $(".section").eq(0).css("backgroundSize","100%,100%");
-    $(".section").eq(1).css("background","url(images/banner2.jpg) no-repeat");
-    $(".section").eq(1).css("backgroundSize","100%,100%");
     $(".section").eq(2).css("background","url(images/banner3.jpg) no-repeat");
     $(".section").eq(2).css("backgroundSize","100%,100%");
 
